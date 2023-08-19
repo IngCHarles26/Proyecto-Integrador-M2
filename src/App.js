@@ -45,6 +45,7 @@ function App() {
 
    const  onSearch = (id)=>{
       if(id>sizeCharacters || id<=0) {window.alert("No hay personajes con ese ID!!!"); return;}
+      
       axios(`https://rickandmortyapi.com/api/character/${id}`)
       .then(({ data }) => {
          if(characters.some(el=>el.id===data.id)) {window.alert("Ya está incluido ese personaje!!!!"); return;}

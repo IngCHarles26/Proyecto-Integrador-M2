@@ -5,7 +5,7 @@ export default function Detail(props){
   const {pathname} = useLocation();
   const {characters} = props;
   const {id} = useParams();
-  const detailCharacter = characters.filter(el=>el.id==id)[0];
+  const detailCharacter = characters.find(el=>el.id==id);
   return(
     <div>
       {detailCharacter

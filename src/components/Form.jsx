@@ -39,8 +39,8 @@ export default function Form(props){
     }))
     setUserData({...userData,
       [e.target.name]:e.target.value})
-  }
-
+  } 
+  
   return(
     <form onSubmit={handleSubmit}>
       <label>Email: </label>
